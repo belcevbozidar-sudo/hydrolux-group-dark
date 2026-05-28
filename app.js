@@ -995,9 +995,6 @@ function renderCatalog() {
                         <span class="product-price">${product.price.toFixed(2)} лв.</span>
                     </div>
                     <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-                        <a href="product-${product.id}.html" class="btn btn-secondary btn-sm" style="display:flex;align-items:center;gap:6px;text-decoration:none;" aria-label="Страница">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span style="font-size:0.78rem;">Страница</span>
-                        </a>
                         <button class="btn btn-primary btn-icon-only" onclick="addProductToCart(${product.id})" aria-label="Купи">
                             <i class="fa-solid fa-cart-plus"></i>
                         </button>

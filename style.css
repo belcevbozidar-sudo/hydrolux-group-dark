@@ -2549,3 +2549,57 @@ footer {
         border-radius: var(--radius-sm);
     }
 }
+
+/* Premium Mobile Header & Menu Drawer Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        color: var(--text-primary);
+        font-size: 1.2rem;
+    }
+    .logo-img {
+        height: 36px;
+    }
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(8, 10, 15, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        gap: 28px;
+        transition: var(--transition-normal);
+        z-index: 199;
+        border-bottom: 1px solid var(--border-color);
+    }
+    nav.active {
+        left: 0;
+    }
+    nav a {
+        font-size: 1.25rem;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-right {
+        gap: 12px;
+    }
+    .cart-trigger {
+        width: 40px;
+        height: 40px;
+    }
+}
