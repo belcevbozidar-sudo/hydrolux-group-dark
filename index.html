@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хидролукс Груп | Хидравлични маркучи и компоненти Монтана</title>
+    <meta name="description" content="Хидролукс Груп Монтана предлага висококачествени хидравлични маркучи, фитинги, цилиндри и уплътнители. Индивидуални решения, проектиране и поддръжка от 2019 г.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-gears"></i>
+                <span>ХИДРОЛУКС ГРУП</span>
+            </a>
+            
+            <nav id="nav-links">
+                <a href="#home" class="active">Начало</a>
+                <a href="#configurator">Конфигуратор</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#services">Услуги</a>
+                <a href="#about">За нас</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+
+            <div class="nav-right">
+                <div class="cart-trigger" id="cart-btn" aria-label="Виж количката">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-new">
+                    <i class="fa-solid fa-circle-check"></i> Лидер в Монтана от 2019 г.
+                </div>
+                <h1>Надеждни решения за <span class="gradient-text cyan-glow-text">хидравлика и пневматика</span></h1>
+                <p>Хидролукс Груп предлага проектиране, производство и поддръжка на хидравлични маркучи и системи с високо налягане за леката и тежката промишленост. Изберете безкомпромисно качество и индивидуален подход.</p>
+                <div class="hero-actions">
+                    <a href="#configurator" class="btn btn-primary">
+                        <i class="fa-solid fa-sliders"></i> Конфигурирай маркуч
+                    </a>
+                    <a href="#catalog" class="btn btn-secondary">
+                        <i class="fa-solid fa-store"></i> Разгледай каталога
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3 id="stat-years">7+</h3>
+                        <p>Години опит</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 id="stat-products">1500+</h3>
+                        <p>Артикула на склад</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 id="stat-clients">99%</h3>
+                        <p>Доволни клиенти</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero.png" alt="Висококачествени хидравлични маркучи и разпределители" id="hero-img">
+                </div>
+                <div class="hero-bg-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configurator Section -->
+    <section id="configurator" class="configurator section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Конфигуратор на хидравлични маркучи</h2>
+                <p>Използвайте нашия професионален инструмент, за да създадете персонален маркуч според нужните ви изисквания за налягане, диаметър и фитинги с автоматично изчисляване на цената.</p>
+            </div>
+
+            <div class="config-container">
+                <!-- Left: Builder Steps -->
+                <div class="config-builder">
+                    <div class="config-steps-progress">
+                        <div class="progress-line" id="progress-line"></div>
+                        <div class="step-indicator active" data-step="1">1</div>
+                        <div class="step-indicator" data-step="2">2</div>
+                        <div class="step-indicator" data-step="3">3</div>
+                        <div class="step-indicator" data-step="4">4</div>
+                    </div>
+
+                    <!-- Step 1: Type and Diameter -->
+                    <div class="config-step-panel active" data-step="1">
+                        <h3><i class="fa-solid fa-water"></i> Стъпка 1: Тип налягане и диаметър</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Изберете категорията според работното налягане на вашата система:</p>
+                        
+                        <div class="grid-select" style="margin-bottom: 30px;">
+                            <div class="grid-card-option selected" data-type="standard" data-price-factor="15">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                                <div class="option-title">Стандартен (1SN / 2SN)</div>
+                                <div class="option-subtitle">До 215 bar, стоманена оплетка</div>
+                            </div>
+                            <div class="grid-card-option" data-type="high" data-price-factor="28">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                                <div class="option-title">Високо налягане (4SP / 4SH)</div>
+                                <div class="option-subtitle">До 450 bar, 4 стоманени навивки</div>
+                            </div>
+                            <div class="grid-card-option" data-type="ultra" data-price-factor="42">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div class="option-title">Ултра налягане (R15)</div>
+                                <div class="option-subtitle">Над 450 bar, екстремна якост</div>
+                            </div>
+                        </div>
+
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">Номинален вътрешен диаметър (DN / mm):</p>
+                        <div class="grid-select" id="dn-selection">
+                            <div class="grid-card-option selected" data-dn="6" data-dn-inch="1/4" data-price-add="0">
+                                <div class="option-title">DN 6 (1/4")</div>
+                                <div class="option-subtitle">Вътрешен: 6.4 mm</div>
+                            </div>
+                            <div class="grid-card-option" data-dn="10" data-dn-inch="3/8" data-price-add="4">
+                                <div class="option-title">DN 10 (3/8")</div>
+                                <div class="option-subtitle">Вътрешен: 9.5 mm</div>
+                            </div>
+                            <div class="grid-card-option" data-dn="12" data-dn-inch="1/2" data-price-add="8">
+                                <div class="option-title">DN 12 (1/2")</div>
+                                <div class="option-subtitle">Вътрешен: 12.7 mm</div>
+                            </div>
+                            <div class="grid-card-option" data-dn="19" data-dn-inch="3/4" data-price-add="15">
+                                <div class="option-title">DN 19 (3/4")</div>
+                                <div class="option-subtitle">Вътрешен: 19.0 mm</div>
+                            </div>
+                            <div class="grid-card-option" data-dn="25" data-dn-inch="1" data-price-add="22">
+                                <div class="option-title">DN 25 (1")</div>
+                                <div class="option-subtitle">Вътрешен: 25.4 mm</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Length -->
+                    <div class="config-step-panel" data-step="2">
+                        <h3><i class="fa-solid fa-ruler-horizontal"></i> Стъпка 2: Дължина на маркуча</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 30px;">Въведете или регулирайте дължината на маркуча в метри (с точност до 0.1 м):</p>
+                        
+                        <div class="input-slider-wrapper">
+                            <div class="slider-labels">
+                                <span>0.1 м</span>
+                                <span id="current-length-label" class="gradient-text" style="font-size: 1.5rem; font-weight: 800;">1.5 м</span>
+                                <span>50.0 м</span>
+                            </div>
+                            <input type="range" class="slider-control" id="hose-length-slider" min="0.1" max="50" step="0.1" value="1.5">
+                            
+                            <div class="length-input-container">
+                                <label for="hose-length-num">Въведете дължина ръчно:</label>
+                                <input type="number" class="length-number-input" id="hose-length-num" min="0.1" max="50" step="0.1" value="1.5">
+                                <span class="length-unit">метра</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Fittings Left & Right -->
+                    <div class="config-step-panel" data-step="3">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Стъпка 3: Избор на фитинги / накрайници</h3>
+                        
+                        <div style="margin-bottom: 32px;">
+                            <h4 style="margin-bottom: 12px; color: var(--accent-primary);"><i class="fa-solid fa-left-right"></i> Накрайник отляво (Страна А)</h4>
+                            <div class="grid-select" id="fitting-left-select">
+                                <div class="grid-card-option selected" data-fitting="straight" data-price-add="8" data-fitting-name="DKOL Прав (0°)">
+                                    <div class="option-title">DKOL Прав (0°)</div>
+                                    <div class="option-subtitle">Женска резба с конус</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="elbow45" data-price-add="14" data-fitting-name="DKOL 45° Коляно">
+                                    <div class="option-title">DKOL 45°</div>
+                                    <div class="option-subtitle">Завит на 45 градуса</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="elbow90" data-price-add="14" data-fitting-name="DKOL 90° Коляно">
+                                    <div class="option-title">DKOL 90°</div>
+                                    <div class="option-subtitle">Завит на 90 градуса</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="flange" data-price-add="25" data-fitting-name="Фланец (Прав)">
+                                    <div class="option-title">Фланечен накрайник</div>
+                                    <div class="option-subtitle">За високо налягане SAE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 style="margin-bottom: 12px; color: var(--accent-primary);"><i class="fa-solid fa-left-right"></i> Накрайник отдясно (Страна Б)</h4>
+                            <div class="grid-select" id="fitting-right-select">
+                                <div class="grid-card-option selected" data-fitting="straight" data-price-add="8" data-fitting-name="DKOL Прав (0°)">
+                                    <div class="option-title">DKOL Прав (0°)</div>
+                                    <div class="option-subtitle">Женска резба с конус</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="elbow45" data-price-add="14" data-fitting-name="DKOL 45° Коляно">
+                                    <div class="option-title">DKOL 45°</div>
+                                    <div class="option-subtitle">Завит на 45 градуса</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="elbow90" data-price-add="14" data-fitting-name="DKOL 90° Коляно">
+                                    <div class="option-title">DKOL 90°</div>
+                                    <div class="option-subtitle">Завит на 90 градуса</div>
+                                </div>
+                                <div class="grid-card-option" data-fitting="flange" data-price-add="25" data-fitting-name="Фланец (Прав)">
+                                    <div class="option-title">Фланечен накрайник</div>
+                                    <div class="option-subtitle">За високо налягане SAE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Protections -->
+                    <div class="config-step-panel" data-step="4">
+                        <h3><i class="fa-solid fa-shield"></i> Стъпка 4: Външна защита на маркуча</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Изберете допълнителен предпазен ръкав за защита от абразия, искри или удари:</p>
+                        
+                        <div class="grid-select">
+                            <div class="grid-card-option selected" data-protection="none" data-price-meter="0" data-protection-name="Без допълнителна защита">
+                                <i class="fa-solid fa-ban"></i>
+                                <div class="option-title">Без защита</div>
+                                <div class="option-subtitle">Стандартно покритие</div>
+                            </div>
+                            <div class="grid-card-option" data-protection="plastic" data-price-meter="3" data-protection-name="Пластмасова спирала">
+                                <i class="fa-solid fa-dharmachakra"></i>
+                                <div class="option-title">Пластмасова спирала</div>
+                                <div class="option-subtitle">Висока устойчивост на триене</div>
+                            </div>
+                            <div class="grid-card-option" data-protection="metal" data-price-meter="7" data-protection-name="Метална пружина">
+                                <i class="fa-solid fa-ring"></i>
+                                <div class="option-title">Метална пружина</div>
+                                <div class="option-subtitle">Защита от механични срязвания</div>
+                            </div>
+                            <div class="grid-card-option" data-protection="textile" data-price-meter="4" data-protection-name="Текстилен ръкав">
+                                <i class="fa-solid fa-shirt"></i>
+                                <div class="option-title">Текстилен ръкав</div>
+                                <div class="option-subtitle">Термо и взривозащитен</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step Nav Controls -->
+                    <div class="config-nav">
+                        <button class="btn btn-secondary" id="config-btn-prev" disabled>
+                            <i class="fa-solid fa-arrow-left"></i> Назад
+                        </button>
+                        <button class="btn btn-primary" id="config-btn-next">
+                            Следваща <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: live summary & add to cart -->
+                <div class="config-preview-panel">
+                    <h3>Преглед на конфигурацията</h3>
+                    
+                    <div class="config-summary-items">
+                        <div class="summary-row">
+                            <span class="summary-label">Тип маркуч:</span>
+                            <span class="summary-value" id="summary-type">Стандартен (1SN / 2SN)</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Диаметър (DN):</span>
+                            <span class="summary-value" id="summary-dn">DN 6 (1/4")</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Дължина:</span>
+                            <span class="summary-value" id="summary-length">1.5 метра</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Ляв накрайник:</span>
+                            <span class="summary-value" id="summary-left">DKOL Прав (0°)</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Десен накрайник:</span>
+                            <span class="summary-value" id="summary-right">DKOL Прав (0°)</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Защитен ръкав:</span>
+                            <span class="summary-value" id="summary-protection">Без защита</span>
+                        </div>
+                    </div>
+
+                    <div class="config-live-price">
+                        <div class="price-label">Прогнозна цена</div>
+                        <div class="price-value-container">
+                            <span class="price-amount" id="config-live-price-amount">38.50</span>
+                            <span class="length-unit">лв.</span>
+                            <span class="price-vat-tag">с ДДС</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-accent glowing-element" style="width: 100%;" id="config-add-to-cart-btn">
+                        <i class="fa-solid fa-cart-plus"></i> Добави в количката
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog / Store Section -->
+    <section id="catalog" class="store section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Магазин & Продуктов Каталог</h2>
+                <p>Разгледайте богатата ни продуктова гама от компоненти за хидравлика и пневматика, поддържани в реално наличност в нашата база в Монтана.</p>
+            </div>
+
+            <!-- Filter and search bar -->
+            <div class="filter-bar">
+                <div class="category-nav" id="catalog-category-tabs">
+                    <span class="category-pill active" data-category="all">Всички продукти</span>
+                    <span class="category-pill" data-category="hoses">Хидравлични маркучи</span>
+                    <span class="category-pill" data-category="fittings">Фитинги & Накрайници</span>
+                    <span class="category-pill" data-category="seals">Хидравлични уплътнители</span>
+                    <span class="category-pill" data-category="cylinders">Цилиндри & Компоненти</span>
+                </div>
+
+                <div class="search-filter-controls">
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search-control" id="catalog-search" placeholder="Търсене на продукт, стандарт или размер...">
+                    </div>
+                    
+                    <div class="price-range-filter">
+                        <span>Цена до:</span>
+                        <input type="range" id="price-range-slider" min="1" max="1000" value="1000">
+                        <span id="price-range-val">1000 лв.</span>
+                    </div>
+
+                    <div class="sort-select-wrapper">
+                        <select id="catalog-sort" aria-label="Сортиране на продукти">
+                            <option value="default">Сортиране по подразбиране</option>
+                            <option value="price-asc">Цена: Ниска към Висока</option>
+                            <option value="price-desc">Цена: Висока към Ниска</option>
+                            <option value="name-asc">Име: А-Я</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-container">
+                <!-- Generated dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Професионални Услуги</h2>
+                <p>„Хидролукс Груп“ осигурява не само продажба на продукти, но и цялостен инженерен цикъл – от проектиране до дългосрочна поддръжка.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Индустриално производство</h3>
+                    <p>Кримпване и асемблиране на хидравлични и индустриални маркучи за всякакви среди и натоварвания – от селскостопанска техника до тежки индустриални машини.</p>
+                    <ul class="service-features-list">
+                        <li><i class="fa-solid fa-check"></i> Експресна изработка на място</li>
+                        <li><i class="fa-solid fa-check"></i> Тестване на стенд под налягане</li>
+                        <li><i class="fa-solid fa-check"></i> Размери от DN6 до DN50</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3>Проектиране & Разработка</h3>
+                    <p>Професионално проектиране на сложни хидравлични и пневматични линии и инсталации за нови мощности, заводи и мобилно индустриално оборудване.</p>
+                    <ul class="service-features-list">
+                        <li><i class="fa-solid fa-check"></i> Прецизни изчисления на дебит</li>
+                        <li><i class="fa-solid fa-check"></i> Избор на оптимални сечения</li>
+                        <li><i class="fa-solid fa-check"></i> Техническа документация</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3>Сервиз и поддръжка</h3>
+                    <p>Пълен рециклиращ сервиз на хидравлични цилиндри, ремонт на бутални и телескопични системи, подмяна на уплътнения, тестване и редовно абонаментно обслужване.</p>
+                    <ul class="service-features-list">
+                        <li><i class="fa-solid fa-check"></i> Диагностика на повредени системи</li>
+                        <li><i class="fa-solid fa-check"></i> Ремонт на цилиндри в Монтана</li>
+                        <li><i class="fa-solid fa-check"></i> Оригинални качествени уплътнители</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about section-padding">
+        <div class="container about-grid">
+            <div class="about-content">
+                <div class="badge-new" style="background: rgba(255, 183, 3, 0.1); color: var(--accent-amber); border-color: var(--border-amber-highlight)">
+                    <i class="fa-solid fa-award"></i> Доказана надеждност
+                </div>
+                <h2>Лидерът в индустриалната хидравлика в Монтана</h2>
+                <p style="margin-bottom: 20px;">От 2019 година **Хидролукс Груп** се развива активно, увеличавайки асортимента си, за да отговори изцяло на изискванията на клиентите в региона. Ние поставяме твърд акцент върху цялостните индивидуални решения – от инженеринговото проектиране и изграждане до сервизното гаранционно обслужване.</p>
+                <p style="margin-bottom: 30px;">Професионализмът на нашия екип и изключителното внимание към всеки детайл гарантират, че всеки индустриален проект се изпълнява с максимална прецизност. Това спестява време и сериозни финансови средства на нашите партньори, подсигурявайки им дълговечна работа на оборудването.</p>
+                
+                <div class="about-features">
+                    <div class="about-feat-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>Бърза реакция</h4>
+                        <p>Експресно отстраняване на аварии по хидравлични системи.</p>
+                    </div>
+                    <div class="about-feat-item">
+                        <i class="fa-solid fa-microscope"></i>
+                        <h4>Безкомпромисен контрол</h4>
+                        <p>Всички материали са сертифицирани с доказан европейски произход.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-img-box">
+                    <img src="assets/cylinders.png" alt="Екип и високотехнологично оборудване на Хидролукс Груп">
+                    <div class="about-img-badge">
+                        <h3>2019</h3>
+                        <p>Година на<br>основаване</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Свържете се с нас</h2>
+                <p>Ние сме на разположение за консултации, поръчки на едро и спешни индустриални ремонти. Посетете ни или се свържете директно по телефон.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact info cards -->
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4>Адрес на базата</h4>
+                            <p>Град Монтана, ул. „Индустриална“ 32г (ул. „Industrialna“ 34)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Телефон за връзка</h4>
+                            <p><a href="tel:+359892484337">+359 89 248 4337</a></p>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Експресни поръчки и технически консултации</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Електронна поща</h4>
+                            <p><a href="mailto:hydroluxgroup@gmail.com">hydroluxgroup@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Работно време</h4>
+                            <p>Понеделник - Петък: 08:00 - 17:00 ч.</p>
+                            <p>Събота: 08:30 - 13:00 ч. | Неделя: Почивен ден</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Map Mockup -->
+                <div class="map-container">
+                    <div class="interactive-map-mock" id="interactive-map">
+                        <div class="map-street street-h"></div>
+                        <div class="map-street street-v"></div>
+                        
+                        <!-- Map Marker -->
+                        <div class="map-marker" id="map-marker-trigger">
+                            <i class="fa-solid fa-location-pin map-pin"></i>
+                            <div class="map-pulse"></div>
+                        </div>
+
+                        <!-- Tooltip Info -->
+                        <div class="map-tooltip">
+                            <h5>Хидролукс Груп</h5>
+                            <p><i class="fa-solid fa-map-location-dot"></i> Монтана, ул. „Индустриална“ 32г</p>
+                            <p><i class="fa-solid fa-phone"></i> +359 89 248 4337</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>ХИДРОЛУКС ГРУП</h3>
+                <p>Надежден партньор в областта на индустриалната хидравлика и пневматика. Производство на сертифицирани хидравлични маркучи, цилиндри и фитинги.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Бързи връзки</h4>
+                <ul>
+                    <li><a href="#home">Начало</a></li>
+                    <li><a href="#configurator">Конфигуратор</a></li>
+                    <li><a href="#catalog">Продукти</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Контакти</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> гр. Монтана, ул. „Индустриална“ 32г</li>
+                    <li><i class="fa-solid fa-phone"></i> +359 89 248 4337</li>
+                    <li><i class="fa-solid fa-envelope"></i> hydroluxgroup@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Хидролукс Груп. Всички права запазени. Изработено с прецизност за тежка индустрия.</p>
+            <button class="admin-trigger-btn" id="admin-panel-btn">
+                <i class="fa-solid fa-user-gear"></i> Админ Симулатор
+            </button>
+        </div>
+    </footer>
+
+    <!-- Sidebar Shopping Cart Panel -->
+    <div class="sidebar-panel-overlay" id="cart-overlay"></div>
+    <div class="sidebar-panel" id="cart-sidebar">
+        <div class="panel-header">
+            <div class="panel-title">
+                <i class="fa-solid fa-cart-flatbed-suitcases"></i>
+                <span>Вашата количка</span>
+            </div>
+            <div class="panel-close" id="cart-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="cart-items-container" id="cart-items-list">
+            <!-- Dynamic Cart Items populated by JS -->
+        </div>
+
+        <div class="panel-footer" id="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-summary-row">
+                    <span>Междинна сума:</span>
+                    <span id="cart-subtotal">0.00 лв.</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>ДДС (20%):</span>
+                    <span id="cart-vat">0.00 лв.</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>Общо за плащане:</span>
+                    <span id="cart-total">0.00 лв.</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" style="width: 100%;" id="checkout-trigger-btn" disabled>
+                <i class="fa-solid fa-circle-check"></i> Към завършване
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="product-detail-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modal-product-title">Хидравличен цилиндър</h3>
+                <div class="panel-close" id="product-modal-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body" id="product-modal-body">
+                <!-- Populated dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-box checkout-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-invoice-dollar"></i> Завършване на поръчката</h3>
+                <div class="panel-close" id="checkout-modal-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-grid">
+                    <!-- Form Details -->
+                    <form class="checkout-form" id="checkout-form" onsubmit="return false;">
+                        <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">Данни за доставка</h4>
+                        
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="checkout-name">Име и Фамилия *</label>
+                                <input type="text" class="form-control" id="checkout-name" required placeholder="Иван Иванов">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-phone">Телефон за връзка *</label>
+                                <input type="tel" class="form-control" id="checkout-phone" required placeholder="089XXXXXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-email">Е-поща *</label>
+                            <input type="email" class="form-control" id="checkout-email" required placeholder="client@domain.bg">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Метод на получаване *</label>
+                            <div class="radio-group">
+                                <div class="radio-option selected" data-shipping="office">
+                                    <input type="radio" name="shipping-method" id="ship-office" checked value="office">
+                                    <div class="radio-option-text">
+                                        <span class="radio-title">До офис на куриер (Еконт / Спиди)</span>
+                                        <span class="radio-desc">Доставка до избран от вас офис (около 6-8 лв)</span>
+                                    </div>
+                                </div>
+                                <div class="radio-option" data-shipping="address">
+                                    <input type="radio" name="shipping-method" id="ship-address" value="address">
+                                    <div class="radio-option-text">
+                                        <span class="radio-title">До личен/служебен адрес</span>
+                                        <span class="radio-desc">Доставка директно до вашата врата</span>
+                                    </div>
+                                </div>
+                                <div class="radio-option" data-shipping="pickup">
+                                    <input type="radio" name="shipping-method" id="ship-pickup" value="pickup">
+                                    <div class="radio-option-text">
+                                        <span class="radio-title">Вземане от базата ни в Монтана</span>
+                                        <span class="radio-desc">ул. „Индустриална“ 32г - Безплатна консултация</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="delivery-address-group">
+                            <label for="checkout-address">Адрес за доставка / Офис на куриер *</label>
+                            <textarea class="form-control" id="checkout-address" rows="2" placeholder="Въведете град, офис на Еконт/Спиди или точен адрес..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="checkout-invoice-check">
+                                <span>Желая фактура за фирма (с ДДС)</span>
+                            </label>
+                        </div>
+
+                        <div id="invoice-details-group" style="display: none; flex-direction: column; gap: 16px;">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="company-name">Име на фирмата</label>
+                                    <input type="text" class="form-control" id="company-name" placeholder="Фирма ООД">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company-eik">ЕИК / БУЛСТАТ</label>
+                                    <input type="text" class="form-control" id="company-eik" placeholder="BG123456789">
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="company-address">Адрес по регистрация</label>
+                                    <input type="text" class="form-control" id="company-address" placeholder="гр. София, ул. ...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company-mol">МОЛ</label>
+                                    <input type="text" class="form-control" id="company-mol" placeholder="Иван Петров">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent" style="width: 100%; font-size: 1.1rem; padding: 14px 28px;" id="place-order-submit">
+                            <i class="fa-solid fa-truck-ramp-box"></i> Изпрати Поръчката
+                        </button>
+                    </form>
+
+                    <!-- Right Summary -->
+                    <div class="checkout-summary-box">
+                        <h4>Поръчани продукти</h4>
+                        <div class="checkout-products-list" id="checkout-summary-items-list">
+                            <!-- Populated via JS -->
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+                            <div class="checkout-summary-item">
+                                <span>Междинно:</span>
+                                <span id="checkout-subtotal">0.00 лв.</span>
+                            </div>
+                            <div class="checkout-summary-item">
+                                <span>Транспорт:</span>
+                                <span id="checkout-shipping">Изчислява се</span>
+                            </div>
+                            <div class="checkout-summary-item" style="border-top: 1px dashed var(--border-color); padding-top: 10px; font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
+                                <span>Общо:</span>
+                                <span id="checkout-total">0.00 лв.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal Overlay -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-box" style="max-width: 550px;">
+            <div class="modal-body success-screen">
+                <div class="success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3>Благодарим за поръчката!</h3>
+                <p>Вашата заявка №<span id="success-order-num" style="color: var(--accent-primary); font-weight: 700;">10001</span> е приета успешно. Наш консултант от Хидролукс Груп Монтана ще се свърже с вас до броени часове за потвърждение.</p>
+                
+                <div class="invoice-preview-card">
+                    <div class="invoice-header">
+                        <span>ХИДРОЛУКС ГРУП ООД</span>
+                        <span id="invoice-date">28.05.2026 г.</span>
+                    </div>
+                    <div style="font-weight: 700; margin-bottom: 12px; font-size: 0.9rem;">ПРОФОРМА ФАКТУРА №<span id="invoice-num">20261001</span></div>
+                    
+                    <div id="invoice-items">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div class="invoice-total-row">
+                        <span>ОБЩО С ДДС:</span>
+                        <span id="invoice-total-amount">0.00 лв.</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="success-close-btn">
+                    Обратно в магазина
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-overlay" id="admin-modal">
+        <div class="modal-box admin-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-user-shield"></i> Хидролукс Груп | Панел за управление</h3>
+                <div class="panel-close" id="admin-modal-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="admin-grid">
+                    <!-- Dashboard cards -->
+                    <div class="admin-stats-cards">
+                        <div class="admin-stat-card">
+                            <div class="label">Общо поръчки</div>
+                            <div class="val" id="admin-total-orders">0</div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <div class="label">Общ оборот (симулиран)</div>
+                            <div class="val" id="admin-total-revenue">0.00 лв</div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <div class="label">Чакащи потвърждение</div>
+                            <div class="val" id="admin-pending-orders" style="color: var(--accent-amber);">0</div>
+                        </div>
+                    </div>
+
+                    <!-- Orders table -->
+                    <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-top: 10px;">Дневник на постъпилите поръчки</h4>
+                    <div class="admin-table-wrapper">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Клиент</th>
+                                    <th>Поръчани продукти</th>
+                                    <th>Стойност</th>
+                                    <th>Доставка</th>
+                                    <th>Статус</th>
+                                    <th>Действие</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-orders-tbody">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core App JS -->
+    <script src="app.js"></script>
+</body>
+</html>

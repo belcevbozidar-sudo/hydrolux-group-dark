@@ -1,0 +1,8 @@
+.DS_Store
+.vercel
+.git
+.github
+node_modules
+dist
+build
+*.log
